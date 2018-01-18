@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import * as listActions from '../actions/listActions';
+import {fetchList} from '../actions/listActions';
 import styled from 'styled-components';
 
 const Img = styled.img`
@@ -58,7 +58,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        fetchList: search => dispatch(listActions.fetchList(search))
+        fetchList: search => dispatch(fetchList(search))
     }
 };
 
