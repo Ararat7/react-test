@@ -1,6 +1,8 @@
 import axios from "axios/index";
 
-import {FETCH_START, FETCH_SUCCESS, FETCH_FAIL} from "./listActionNames";
+const FETCH_START = 'FETCH_START';
+const FETCH_SUCCESS = 'FETCH_SUCCESS';
+const FETCH_FAIL = 'FETCH_FAIL';
 
 export const fetchStart = (search) => {
     return {
