@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import styled from 'styled-components';
 
-import * as listActions from '../actions/listActions';
+import {fetchList} from '../actions/listActions';
 
 const Img = styled.img`
     display: inline-block;
@@ -59,7 +59,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        fetchList: search => dispatch(listActions.fetchList(search))
+        fetchList: search => dispatch(fetchList(search))
     }
 };
 
