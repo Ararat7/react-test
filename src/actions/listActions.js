@@ -1,5 +1,7 @@
 import axios from "axios/index";
 
+import {mediaUrl} from "../services/urls";
+
 export const fetchStart = (search) => {
     return {
         type: 'FETCH_START',
@@ -24,7 +26,7 @@ export const fetchFail = error => {
 export const fetchList = search => dispatch => {
     if (!search) return;
     dispatch(fetchStart(search));
-    axios.get('https://images-api.nasa.gov/search?year_start=2017&media_type=image&q=' + search)
+    axios.get(mediaUrl({search}))
         .then(response => {
             let payload = response.data.collection.items.slice(0, 5);
             dispatch(fetchSuccess(payload));
