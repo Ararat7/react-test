@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import routes from "../routes";
 import {BrowserRouter} from 'react-router-dom';
 import styled from 'styled-components';
+
+import routes from "../routes";
 
 const Section = styled.section`
     width: 100%;

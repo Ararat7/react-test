@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import * as listActions from '../actions/listActions';
 import styled from 'styled-components';
+
+import * as listActions from '../actions/listActions';
 
 const Img = styled.img`
     display: inline-block;

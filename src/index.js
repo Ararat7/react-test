@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
 import {Provider} from 'react-redux';
-import './index.css';
 
+import App from './components/App';
+import configureStore from './store/configureStore';
 import registerServiceWorker from './registerServiceWorker';
 
-import configureStore from './store/configureStore';
+import './index.css';
 
 const store = configureStore();
 

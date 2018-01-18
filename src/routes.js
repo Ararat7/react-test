@@ -1,5 +1,6 @@
 import React from 'react';
 import {Route} from 'react-router'
+
 import List from './components/List';
 import Details from './components/Details';
 
