@@ -17,13 +17,13 @@ const P = styled.p`
 `;
 
 const LoadMask = styled.div`
-    display: ${props => props.visible ? 'block' : 'none'};
+    display: 'block;
     font-size: 30px;
     text-align: center;
     line-height: 2;
 `;
 
-class List extends Component {
+export class List extends Component {
     componentWillMount() {
         this.props.fetchList(this.props.list.search);
     }
@@ -35,7 +35,7 @@ class List extends Component {
     render() {
         return (
             <div>
-                <LoadMask visible={this.props.list.loading}>Loading...</LoadMask>
+                {this.props.list.loading ? <LoadMask>Loading...</LoadMask> : null}
                 <input type="text" value={this.props.list.search} onChange={this.onChange.bind(this)}/>
                 <ul>
                     {
